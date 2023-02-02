@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+body {
+  background: linear-gradient(to bottom, #807ece 0%, #8e7ece 100%);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+}
+#calculator {
+  height: 480px;
+  width: 290px;
+
+  padding: 10px;
+  background-color: #2d2a37;
+  box-shadow: 0 1px 10px 5px rgb(0, 0, 0, 0.1);
+
+  border-radius: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: space-between;
+}
+.display {
+  width: 80%;
+  height: 25%;
+
+  background-color: #2d2a37;
+  color: white;
+  font-size: 35px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.display .icon {
+  opacity: 0.5;
+  width: 10%;
+}
+#calc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
+}
+#calc span {
+  opacity: 0.5;
+  font-size: 24px;
+}
+#resultInput {
+  max-width: 90%;
+}
+.keyboard {
+  width: 100%;
+  height: 80%;
+
+  display: grid;
+  grid-template-areas:
+    "A B C D"
+    "E F G H"
+    "I L M N"
+    "O P Q R";
+
+  place-content: center;
+}
+.keyboard button {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 6px;
+
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50%;
+
+  box-shadow: 1px 2px 2px 2px rgb(0, 0, 0, 0.2);
+
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+
+  transition: all 0.2s;
+}
+.keyboard #operators {
+  background-color: #462878;
+}
+#operators:last-child {
+  background-color: #7f45e2;
+}
+#clear {
+  color: #975dfa;
+}
+button .lens {
+  font-size: 5px;
+}
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
